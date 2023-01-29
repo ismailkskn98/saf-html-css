@@ -12,6 +12,7 @@ html {
 
 body {
     font-size: 1.4rem;
+
 }
 
 /* Global End */
@@ -238,8 +239,7 @@ nav .nav-container .mobil-menu-open {
     grid-column: 1 / span 2;
     min-height: 120%;
     display: grid;
-    grid-template-columns: 55% auto;
-
+    grid-template-columns: 55% 45%;
 }
 
 .slider .slider-info {
@@ -248,40 +248,224 @@ nav .nav-container .mobil-menu-open {
     letter-spacing: 2px;
 }
 
-.slider .slider-info h2{
+.slider .slider-info h2 {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     display: inline-block;
-    width: 30rem;
+    min-width: 30rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
-.slider .slider-info h4{
+.slider .slider-info h4 {
     padding: 0.5rem;
     font-size: 1.3rem;
 }
 
-.slider .slider-info h4:nth-last-of-type(2) , .slider .slider-info h4:nth-last-of-type(1){
+.slider .slider-info h4:nth-last-of-type(2),
+.slider .slider-info h4:nth-last-of-type(1) {
     color: rgba(255, 255, 255, 0.384);
     font-size: 1rem;
 }
 
 .slider .content {
     color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.slider .content .content-baslik {
+    font-size: 6rem;
+}
+
+/* .slider .content h1{
+    font-size: 10rem;
+} */
+
+.slider .content p,
+.slider .content a {
+    margin-top: 1rem;
+    line-height: 3rem;
+    letter-spacing: 2px;
+    color: white;
+    transition: all 0.5s;
+}
+
+.slider .content a:hover {
+    color: #FAFC6B;
 }
 
 .bilgilendirme {
     grid-column: 1 / span 2;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
+    color: white;
+    border-right: 1px solid rgba(19, 19, 19, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.bilgilendirme .bilgi-slider {}
+.bilgilendirme .bilgi-slider {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
 
-.bilgilendirme .on-bilgilendirme {}
+.bilgilendirme .bilgi-slider .text-slider-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-right: 3rem;
+    line-height: 2.5rem;
+}
+
+.bilgilendirme .bilgi-slider .text-slider-1 h4 {
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.bilgilendirme .bilgi-slider .text-slider-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.bilgilendirme .bilgi-slider .text-slider-2 p {
+    padding-top: 3rem;
+    line-height: 2.5rem;
+}
+
+.bilgilendirme .on-bilgilendirme {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 100% 100%;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-image {
+    background-image: url(/bilgi-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 5rem;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text .bilgi-text-baslik {
+    margin-bottom: 2.5rem;
+    letter-spacing: 3px;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text .bilgi-text-icerik {
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text .bilgi-text-link {
+    margin-top: 2rem;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text .bilgi-text-link a {
+    text-decoration: none;
+    color: #FAFC6B;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.bilgilendirme .on-bilgilendirme .bilgi-text .bilgi-text-link a:hover {
+    color: #b1b34c;
+}
 
 /* Section End */
 
 /* Home Container End */
 
 /* Home End*/
+
+/* mobil bilgilendirme Start*/
+.mobil-bilgilendirme {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    display: none;
+}
+
+.mobil-bilgilendirme .mobil-bilgi-slider {
+    grid-column: 1 / span 2;
+    background-color: #24232c;
+    color: white;
+    padding: 2rem;
+    padding-bottom: 4rem;
+}
+
+.mobil-bilgilendirme .mobil-bilgi-slider .mobil-text-slider-1 h2 {
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.mobil-bilgilendirme .mobil-bilgi-slider .mobil-text-slider-1 p,
+.mobil-bilgilendirme .mobil-bilgi-slider .mobil-text-slider-2 p {
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme {
+    grid-column: 1 / span 2;
+    background-color: #24232c;
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    min-height: 20rem;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-image {
+    background-image: url(/bilgi-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text {
+    padding: 3rem;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-baslik {
+    padding: 2rem;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-baslik h4 {
+    letter-spacing: 3px;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-icerik p {
+    line-height: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-link a {
+    text-decoration: none;
+    color: #FAFC6B;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-link {
+    margin-top: 2rem;
+}
+
+.mobil-bilgilendirme .mobil-on-bilgilendirme .mobil-bilgi-text-link a:hover {
+    color: #b1b34c;
+}
+
+/* mobil bilgilendirme End*/

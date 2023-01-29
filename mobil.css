@@ -1,4 +1,4 @@
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1240px) {
     #home .container {
         grid-template-columns: 1fr;
     }
@@ -22,6 +22,38 @@
     }
 }
 
+@media screen and (max-width: 1150px) {
+    .bilgilendirme {
+        display: none;
+    }
+
+    .mobil-bilgilendirme {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 935px) {
+    .slider {
+        grid-column: 1 / span 2;
+        display: grid;
+        grid-template-columns: auto;
+        background-color: rgba(37, 37, 37, 0.5);
+    }
+
+    .slider .slider-info {
+        grid-area: 2 / 1 / 3 / 2;
+        padding: 0 2rem;
+        letter-spacing: 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+    }
+
+    .slider .content .content-baslik {
+        font-size: 4rem;
+    }
+}
 
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -30,5 +62,9 @@
 
     .sidenav a {
         font-size: 18px;
+    }
+
+    .mobil-bilgilendirme .mobil-on-bilgilendirme {
+        grid-template-columns: 50% 50%;
     }
 }
